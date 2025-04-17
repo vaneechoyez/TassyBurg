@@ -461,18 +461,11 @@ iframe {
 /* App Section
 --------------------------------*/
 #app.banner-section {
-  background: url("../img/tassyburg-app.jpg") center center no-repeat;
-  background-size: cover;
   position: relative;
-  min-height: 120vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 200px 270px;
-  overflow: hidden;
+  min-height: 120vh; 
+  padding: 60px 20px;
+  background: url("../img/Tassyburg.app.png") center 35% / cover no-repeat !important; /* Enfoca el texto de la imagen */
+  background-color: #fff; /* fondo de respaldo si no carga la imagen */
 }
 
 #app .app-content {
@@ -483,19 +476,19 @@ iframe {
 }
 
 .store-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 150px;
+  margin-top: 55vh; /* Posiciona botones debajo del texto de la imagen */
+  flex-direction: column;
+  gap: 25px;
+  z-index: 3;
 }
 
 .store-links img {
-  height: 60px;
+  height: 65px;
   width: auto;
-  transition: transform 0.3s ease;
-  object-fit: contain; /* por si tienen bordes blancos */
+  transition: transform 0.3s;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3)); /* Mejor contraste */
 }
+
 
 .store-links img:hover {
   transform: scale(1.1);
@@ -509,24 +502,28 @@ iframe {
   #app .app-content p {
     font-size: 16px;
   }
-
-  #app.banner-section {
-    min-height: 100vh;
-    padding: 60px 20px;
+  
+  #app.banner-section {min-height: 60vh; /* Altura más adecuada para móvil */
+    padding: 60px 20px 30px; /* Reduce padding superior/inferior */
+    background-size: cover;
+    background-position: center 30%; /* Enfoca mejor la imagen */
   }
-
   .store-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 150px;
+    margin-top: 45vh; /* Botones más abajo en móvil */
   }
-
   .store-links img {
-    height: 50px;
+    height: 55px;
+    width: 180px;
+    object-fit: contain;
   }
 }
 
+@media (max-width: 480px) {
+  store-links {
+    margin-top: 40vh;
+    gap: 15px;
+  }
+}
 
 /* Contact Section
 --------------------------------*/
