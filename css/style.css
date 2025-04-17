@@ -466,6 +466,8 @@ iframe {
   padding: 60px 20px;
   background: url("../img/Tassyburg.app.png") center 35% / cover no-repeat !important; /* Enfoca el texto de la imagen */
   background-color: #fff; /* fondo de respaldo si no carga la imagen */
+  display: flex;
+  align-items: center;
 }
 
 #app .app-content {
@@ -476,14 +478,15 @@ iframe {
 }
 
 .store-links {
-  margin-top: 55vh; /* Posiciona botones debajo del texto de la imagen */
+  padding-top: 60px;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   z-index: 3;
+  text-align: center;
 }
 
 .store-links img {
-  height: 65px;
+  height: 60px;
   width: auto;
   transition: transform 0.3s;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3)); /* Mejor contraste */
@@ -509,7 +512,7 @@ iframe {
     background-position: center 30%; /* Enfoca mejor la imagen */
   }
   .store-links {
-    margin-top: 45vh; /* Botones más abajo en móvil */
+    margin-top: 40vh; /* Botones más abajo en móvil */
   }
   .store-links img {
     height: 55px;
@@ -756,3 +759,23 @@ iframe {
     padding: 100px 0 20px 0;
   }
 }
+
+@media (max-width: 768px) {
+  /* Achica los círculos del menú */
+  #menu .member {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+  }
+
+  /* Achica la imagen dentro del círculo */
+  #menu .member img {
+    max-width: 90px;
+  }
+
+  /* Acomoda los elementos del row para que queden 2 por fila */
+  #menu .row {
+    justify-content: center;
+  }
+}
+
