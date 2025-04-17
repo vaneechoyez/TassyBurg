@@ -518,15 +518,14 @@ iframe {
   }
 }
 
-@media (max-width: 480px) and (orientation: portrait) {
-  #app.banner-section {
-    background-position: center top 15% !important;
-    min-height: 100vh !important;
+@media (max-width: 480px) {
+  #menu .member {
+    width: 130px !important;
+    height: 130px !important;
   }
 
-  .store-links {
-    margin-top: 55vh;
-    transform: translateY(15%);
+  #menu .member img {
+    max-width: 85px !important;
   }
 }
 /* Contact Section
