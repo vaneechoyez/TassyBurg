@@ -518,13 +518,17 @@ iframe {
   }
 }
 
-@media (max-width: 480px) {
-  store-links {
-    margin-top: 40vh;
-    gap: 15px;
+@media (max-width: 480px) and (orientation: portrait) {
+  #app.banner-section {
+    background-position: center top 15% !important;
+    min-height: 100vh !important;
+  }
+
+  .store-links {
+    margin-top: 55vh;
+    transform: translateY(15%);
   }
 }
-
 /* Contact Section
 --------------------------------*/
 
