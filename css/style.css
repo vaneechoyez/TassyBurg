@@ -761,21 +761,44 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  /* Achica los círculos del menú */
-  #menu .member {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 20px;
-  }
-
-  /* Achica la imagen dentro del círculo */
-  #menu .member img {
-    max-width: 90px;
-  }
-
-  /* Acomoda los elementos del row para que queden 2 por fila */
   #menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #menu .col-lg-3.col-md-6 {
+    width: 45%;
+    margin: 10px;
+    display: flex;
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  #menu .member {
+    width: 140px;
+    height: 140px;
+  }
+
+  #menu .member img {
+    max-width: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .store-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .store-links img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+
 
